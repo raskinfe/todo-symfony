@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(243, 243, 235);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    gap: 30px;
+    padding: 40px;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    width: 600px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.input-card {
+    display: flex;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.input-card input {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(243, 243, 235);
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+
+.input-card .btn {
+    padding: 10px 20px;
+    background-color: rgb(18, 94, 175);
+    color: #fff;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.fa-edit {
+    color: green;
+}
+
+.fa-edit:hover {
+    color: rgba(4, 50, 4, 0.63);
+}
+
+.fa-trash {
+    color: crimson;
+}
+
+.fa-trash:hover {
+    color: rgba(83, 6, 22, 0.633);
+}

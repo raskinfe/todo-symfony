@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}Edit{% endblock %}
+{% block content%}
+	<section class="container">
+		<div class="card header-card">
+			<header class="title">Task Manager</header>
+			<div class="input-card">
+				<form method="POST" action="{{path('update', {id: task.id})}}">
+					<input 
+						type="text" 
+						name="task" 
+						id="task" 
+						placeholder="e.g. wash dishes"
+						value="{{task.body}}"
+					>
+					<input class="btn btn-primary" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</section>
+{% endblock %}

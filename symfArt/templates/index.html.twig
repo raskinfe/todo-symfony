@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+	<section class="container">
+		<div class="card header-card">
+			<header class="title">Task Manager</header>
+			<div class="input-card">
+				<form method="POST" action="{{path('save')}}">
+					<input 
+						type="text" 
+						name="task" 
+						id="task" 
+						placeholder="e.g. wash dishes"
+					>
+					<input class="btn btn-primary" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="container">
+	{% for task in tasks %}
+			<div class="card task-card">
+				<div class="card-content">{{task.body}}</div>
+				<div class="actions">
+					<a href="{{path('edit', {id: task.id})}}"><i class="fa fa-edit"></i></a>
+					<a href="{{path('destroy', {id: task.id})}}"><i class="fa fa-trash"></i></a>
+				</div>
+			</div>
+	{% endfor %}
+	</section>	
+{% endblock %}
+
+{% block scripts %}
+<script>
+</script>
+{% endblock %}
